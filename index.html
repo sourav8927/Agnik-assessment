@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Disappearing</title>
+  <style>
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 5px;
+    }
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .hidden { display: none; }
+    .inputdiv{
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      margin-top: 50px; 
+      gap: 40px;
+    }
+    .numCirclesDiv{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: 40px;
+    }
+    .buttons{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: 40px;
+    }
+    .circlesDiv{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="inputdiv">
+    <div>
+      <label for="red">Red (seconds): </label>
+      <input type="number" id="red" min="0" />
+    </div>
+    <div>
+      <label for="green">Green (seconds): </label>
+      <input type="number" id="green" min="0" />
+    </div>
+    <div>
+      <label for="blue">Blue (seconds): </label>
+      <input type="number" id="blue" min="0" />
+    </div>
+  </div>
+
+  <div class="numCirclesDiv">
+    <label for="numCircles">Number of Circles (0-10): </label>
+    <input type="number" id="numCircles" min="0" max="10" />
+  </div>
+  <div class="buttons">
+    <button id="submit">Submit</button>
+  </div>
+<div class="circlesDiv">
+  <div id="redCircles" class="circle-row"></div>
+  <div id="greenCircles" class="circle-row"></div>
+  <div id="blueCircles" class="circle-row"></div>
+
+</div>
+<div class="buttons">
+  <button id="start" class="hidden">Start</button>
+    <button id="reset" class="hidden">Reset</button>
+
+</div>
+  <script src="script.js">
+  </script>
+</body>
+</html>
